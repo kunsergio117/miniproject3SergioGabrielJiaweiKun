@@ -1,3 +1,6 @@
+### INF601 - Advanced Programming in Python
+### Sergio Gabriel Jiawei Kun
+### Mini Project 3
 import os
 
 from flask import Flask

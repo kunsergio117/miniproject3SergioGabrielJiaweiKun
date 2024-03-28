@@ -1,3 +1,7 @@
+### INF601 - Advanced Programming in Python
+### Sergio Gabriel Jiawei Kun
+### Mini Project 3
+
 import sqlite3
 
 import click

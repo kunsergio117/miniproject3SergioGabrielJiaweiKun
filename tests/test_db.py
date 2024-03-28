@@ -1,5 +1,7 @@
 import sqlite3
-
+### INF601 - Advanced Programming in Python
+### Sergio Gabriel Jiawei Kun
+### Mini Project 3
 import pytest
 from flaskr.db import get_db
 
