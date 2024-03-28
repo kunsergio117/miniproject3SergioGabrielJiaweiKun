@@ -6,11 +6,12 @@ Practice program / Base template using Flask and SQLite to create a blog web app
 ### Mini Project 3
 
 ## Description
+This web application runs on Flask, and uses an API that scrapes github for the number of repositories and user's profile image of a particular user. This is then stored in the app database.
 ## Getting Started
 
 ### pip install instructions
 Ensure that the following lines are run for the program to function.
-This pip installs all the required packages listed in the requirements.txt file.
+This installs all the required packages listed in the requirements.txt file:
 ```python
 pip install -r requirements.txt
 ```
