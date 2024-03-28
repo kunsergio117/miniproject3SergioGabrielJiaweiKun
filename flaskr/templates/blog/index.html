@@ -20,6 +20,11 @@
         {% endif %}
       </header>
       <p class="body">{{ post['body'] }}</p>
+
+      {% if post['image_filename'] %}
+
+        <img src="{{ url_for('static', filename='media_uploads/' + post['image_filename']) }}" alt="Post Image">
+      {% endif %}
     </article>
     {% if not loop.last %}
       <hr>

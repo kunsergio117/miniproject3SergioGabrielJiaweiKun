@@ -21,10 +21,18 @@ pip install -r requirements.txt
 
 ### Installing
 * Python 3.11
+* the following installs the application onto your virtual environment
+```python
+pip install -e .
+```
 
 ### Executing program
-The following asks flask to run the program for dev purposes.
+* The first line is to initialise the sql database, and the 2nd 
+asks flask to run the program for dev purposes.
+* Remember that the first line needs to be re-run every time that changes are made to the schema.sql file.
+
 ```python
+flask --app flaskr init-db 
 flask --app flaskr run --debug
 ```
 once running, you should be able to see the web application run in:
