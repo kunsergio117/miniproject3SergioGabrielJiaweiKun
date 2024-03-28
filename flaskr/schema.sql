@@ -16,3 +16,7 @@ CREATE TABLE post (
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
 
+/* adding column to store images in posts */
+ALTER TABLE post ADD COLUMN image_filename TEXT;
+
+
