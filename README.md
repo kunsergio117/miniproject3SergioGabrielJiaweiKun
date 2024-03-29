@@ -1,5 +1,11 @@
 # miniproject3SergioGabrielJiaweiKun
-Practice program / Base template using Flask and SQLite to create a blog web application.
+Prototype program using Flask, SQLite and Bootstrap to create a blog web application.
+Capabilities:
+* User authentication
+* View posts from all users
+* Edit own posts
+* Search for keywords in title and body of posts
+* Modal messages for flashing error messages
 
 ### INF601 - Advanced Programming in Python
 ### Sergio Gabriel Jiawei Kun
@@ -33,7 +39,7 @@ asks flask to run the program for dev purposes.
 
 ```python
 flask --app flaskr init-db 
-flask --app flaskr run --debug
+flask --app flaskr run
 ```
 once running, you should be able to see the web application run in:
 http://127.0.0.1:5000
