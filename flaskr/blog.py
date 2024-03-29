@@ -11,13 +11,6 @@ from flaskr.db import get_db
 
 bp = Blueprint('blog', __name__)
 
-UPLOAD_FOLDER = 'media_uploads'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 
 @bp.route('/')
 def index():
@@ -41,27 +34,13 @@ def create():
         if not title:
             error = 'Title is required.'
 
-        # File upload handling
-        if 'image' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
-
-        file = request.files['image']
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
         # Continue with post creation
         if error is None:
             db = get_db()
             db.execute(
-                'INSERT INTO post (title, body, author_id, image_filename)'
+                'INSERT INTO post (title, body, author_id)'
                 ' VALUES (?, ?, ?, ?)',
-                (title, body, g.user['id'], filename if file else None)
+                (title, body, g.user['id'])
             )
             db.commit()
             return redirect(url_for('blog.index'))
