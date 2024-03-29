@@ -1,7 +1,7 @@
 html { font-family: sans-serif; background: #eee; padding: 1rem; }
 body { max-width: 960px; margin: 0 auto; background: white; }
-h1 { font-family: serif; color: #377ba8; margin: 1rem 0; }
-a { color: #377ba8; }
+h1 { font-family: serif; color: royalblue; margin: 1rem 0; }
+a { color: #377ba8; text-decoration: none; font-size: small;}
 hr { border: none; border-top: 1px solid lightgray; }
 nav { background: lightgray; display: flex; align-items: center; padding: 0 0.5rem; }
 nav h1 { flex: auto; margin: 0; }
@@ -39,7 +39,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 175%;
     z-index: -1;
     background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
     animation: animateBackground 30s linear infinite alternate;

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search Results</h1>
+  {% if search_results %}
+    <ul>
+      {% for post in search_results %}
+        <li>
+          <h3>{{ post['title'] }}</h3>
+          <p>{{ post['body'] }}</p>
+          <!-- You can display additional information here -->
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endblock %}

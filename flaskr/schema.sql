@@ -17,3 +17,12 @@ CREATE TABLE post (
 );
 
 
+-- Populate user table with example data
+INSERT INTO user (username, password) VALUES ('user1', 'password1');
+INSERT INTO user (username, password) VALUES ('user2', 'password2');
+
+-- Populate post table with example data
+INSERT INTO post (author_id, title, body) VALUES (1, 'Example Post 1', 'This is an example post.');
+INSERT INTO post (author_id, title, body) VALUES (2, 'Example Post 2', 'This is another example post.');
+
+

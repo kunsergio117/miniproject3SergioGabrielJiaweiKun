@@ -8,8 +8,6 @@
   <form method="post" enctype="multipart/form-data">
     <label for="title">Title:</label><br>
     <input type="text" id="title" name="title" value="{{ request.form['title'] or post['title'] }}" required><br>
-    <label for="image">Update Image:</label><br>
-    <input type="file" id="image" name="image"><br>
     <label for="body">Body:</label><br>
     <textarea id="body" name="body" required>{{ request.form['body'] or post['body'] }}</textarea><br>
 <!--    {% if post['image_filename'] %}-->
